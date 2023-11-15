@@ -1,0 +1,327 @@
+.ribbon3 {
+  display: inline-block;
+  position: relative;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  padding: 7px 0;
+  font-size: 18px;
+  background: #acd879;
+  color: #FFF;
+  box-sizing: border-box;
+  margin-left: 1.2rem;
+}
+
+.ribbon3 h3 {
+  margin: 0;
+  padding: 0 30px;
+  border-top: dashed 2px rgba(255, 255, 255, 0.5);
+  border-bottom: dashed 2px rgba(255, 255, 255, 0.5);
+  line-height: 42px;
+}
+
+.ribbon3:before, .ribbon3:after {
+  position: absolute;
+  content: '';
+  width: 0px;
+  height: 0px;
+  z-index: 1;
+}
+
+.ribbon3:before {
+  /*左の山形*/
+  top: 0;
+  left: 0;
+  border-width: 30px 0px 30px 15px;
+  border-color: transparent transparent transparent #fff;
+  border-style: solid;
+}
+
+.ribbon3:after {
+  /*右の山形*/
+  top: 0;
+  right: 0;
+  border-width: 30px 15px 30px 0px;
+  border-color: transparent #fff transparent transparent;
+  border-style: solid;
+}
+
+body {
+    background: gray;
+  }
+  
+  #gray{
+    background: gray;
+  }
+
+
+
+h1{
+  text-align: center;
+}
+
+h2{
+  padding-top: 1.2rem;
+}
+
+h3{
+  font-size: 30px;
+}
+
+
+  .container{
+      background: white;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+    } 
+  
+  .navi{
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .ryuji{
+    margin-bottom: 1rem;
+  }
+  
+  img{
+      max-width: 100%;
+      height: auto;
+    }
+  
+  .top{
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  
+  footer {
+      background: dimgray;
+      color: white;
+      padding: 3rem;
+      text-align: center;
+  }
+  
+  ul {
+      display: flex;
+      padding: 0;
+    }
+  
+  li {
+      list-style: none;
+      margin-right: 1rem;
+  }
+  
+  .row{
+      display: flex;
+    }
+  
+  main {
+      flex: 3;
+      margin-right: 2rem;
+    }
+    
+  aside {
+      flex: 1;
+      margin-top: 3rem;
+    }
+  
+  
+  a.btn--orange {
+    color: #fff;
+    background-color: #eb6100;
+    border-bottom: 5px solid #b84c00;
+  }
+  a.btn--orange:hover {
+    margin-top: 3px;
+    color: #fff;
+    background: #f56500;
+    border-bottom: 2px solid #b84c00;
+  }
+  a.btn--shadow {
+    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+  }
+  
+  .inquiry {
+      display: flex;
+    }
+  .inquiry section {
+      margin-left: 1rem;
+    }
+  
+  input {
+      margin: 1rem 0;
+    }
+  
+  /* 格言ガチャ */
+  #gacha-display{
+    margin-top: 1rem;
+    min-height: 3rem;
+  }
+  
+  #gacha-button{
+    margin-bottom: 3rem;
+  }
+  
+  @media (max-width:767px) {
+      .row{
+          flex-direction: column;
+      }
+  }
+  
+  @media (max-width:767px) {
+      .row, .inquiry {
+        flex-direction: column;
+      }
+      h3{
+        padding: 0 auto;
+        font-size: 18px;
+        text-wrap: nowrap;
+      }
+
+    }
+
+/*========= レイアウトのためのCSS ===============*/
+body {
+  overflow: hidden;
+}
+
+.flex{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.box{
+  width: 220px;
+  padding: 20px;
+    margin: 0 20px 20px 20px;
+  background: yellowgreen;
+  border-radius: 0.67em;   /* 角丸 */
+  color: #fff;
+  box-sizing:border-box;
+    list-style: none;
+}
+
+/*==================================================
+スタート時は要素自体を透過0にするためのopacity:0;を指定する
+===================================*/
+
+.box{
+  opacity: 0;
+}
+
+/*==================================================
+ふわっ
+===================================*/
+
+.fadeUp {
+animation-name:fadeUpAnime;
+animation-duration:0.5s;
+animation-fill-mode:forwards;
+opacity: 0;
+}
+
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+a{
+  text-decoration: none;
+  }
+
+
+  /*==================================================
+  アコーディオンのためのcss
+  ===================================*/
+  
+  /*アコーディオン全体*/
+  .accordion-area{
+      list-style: none;
+      width: 96%;
+      max-width: 900px;
+      margin:0 auto;
+      text-wrap: nowrap;
+  }
+  
+  .accordion-area li{
+      margin: 10px 0;
+  }
+  
+  .accordion-area section {
+    border: 1px solid #ccc;
+  }
+  
+  /*アコーディオンタイトル*/
+  .title {
+      position: relative;/*+マークの位置基準とするためrelative指定*/
+      cursor: pointer;
+      font-size:1rem;
+      font-weight: normal;
+      padding: 3% 3% 3% 50px;
+      transition: all .5s ease;
+      text-wrap: nowrap;
+  }
+  
+  /*アイコンの＋と×*/
+  .title::before,
+  .title::after{
+      position: absolute;
+      content:'';
+      width: 15px;
+      height: 2px;
+      background-color: #333;
+      
+  }
+  .title::before{
+      top:48%;
+      left: 15px;
+      transform: rotate(0deg);
+      
+  }
+  .title::after{    
+      top:48%;
+      left: 15px;
+      transform: rotate(90deg);
+  
+  }
+  /*　closeというクラスがついたら形状変化　*/
+  .title.close::before{
+    transform: rotate(45deg);
+  }
+  
+  .title.close::after{
+    transform: rotate(-45deg);
+  }
+  
+  /*アコーディオンで現れるエリア*/
+  .box2 {
+      display: none;/*はじめは非表示*/
+      background: #f3f3f3;
+      margin:0 3% 3% 0;
+      padding: 3%;
+      text-wrap: nowrap;
+  }
+  
+  /*========= レイアウトのためのCSS ===============*/
+  
+#ark{
+  text-wrap: nowrap;
+}
+
+p{
+  text-wrap: nowrap;
+}
+  
+  
+  

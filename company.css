@@ -1,0 +1,449 @@
+.ribbon3 {
+  display: inline-block;
+  position: relative;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  padding: 7px 0;
+  font-size: 18px;
+  background: #acd879;
+  color: #FFF;
+  box-sizing: border-box;
+  margin-left: 1.2rem;
+}
+
+.ribbon3 h3 {
+  margin: 0;
+  padding: 0 30px;
+  border-top: dashed 2px rgba(255, 255, 255, 0.5);
+  border-bottom: dashed 2px rgba(255, 255, 255, 0.5);
+  line-height: 42px;
+}
+
+.ribbon3:before, .ribbon3:after {
+  position: absolute;
+  content: '';
+  width: 0px;
+  height: 0px;
+  z-index: 1;
+}
+
+.ribbon3:before {
+  /*左の山形*/
+  top: 0;
+  left: 0;
+  border-width: 30px 0px 30px 15px;
+  border-color: transparent transparent transparent #fff;
+  border-style: solid;
+}
+
+.ribbon3:after {
+  /*右の山形*/
+  top: 0;
+  right: 0;
+  border-width: 30px 15px 30px 0px;
+  border-color: transparent #fff transparent transparent;
+  border-style: solid;
+}
+body {
+    background: gray;
+  }
+
+h1{
+  text-align: center;
+}
+  
+  #gray{
+    background: gray;
+  }
+  
+  .container{
+      background: white;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+    } 
+  
+  .navi{
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .ryuji{
+    margin-bottom: 1rem;
+  }
+  
+  img{
+    width: 320px;
+    height: auto;
+    margin-right: 2rem;
+    padding-right: 6rem;
+  }
+  
+  .top{
+    text-align: center;
+  }
+  
+  
+  footer {
+      background: dimgray;
+      color: white;
+      padding: 3rem;
+      text-align: center;
+  }
+  
+  ul {
+      display: flex;
+      padding: 0;
+    }
+  
+  li {
+      list-style: none;
+      margin-right: 1rem;
+  }
+  
+  .row{
+      display: flex;
+    }
+  
+  main {
+      flex: 3;
+      margin-right: 2rem;
+    }
+    
+  aside {
+      flex: 1;
+      margin-top: 3rem;
+    }
+  
+  .box {
+    white-space: nowrap;
+    border-radius: 0.67em;   /* 角丸 */
+  }
+  
+  a.btn--orange {
+    color: #fff;
+    background-color: #eb6100;
+    border-bottom: 5px solid #b84c00;
+  }
+  a.btn--orange:hover {
+    margin-top: 3px;
+    color: #fff;
+    background: #f56500;
+    border-bottom: 2px solid #b84c00;
+  }
+  a.btn--shadow {
+    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+  }
+  
+  .inquiry {
+      display: flex;
+    }
+  .inquiry section {
+      margin-left: 1rem;
+    }
+  
+  input {
+      margin: 1rem 0;
+    }
+  
+  /* 格言ガチャ */
+  #gacha-display{
+    margin-top: 1rem;
+    min-height: 3rem;
+    margin-bottom: 1rem;
+    border: 2px solid #0a0;  /* 枠線 */
+    padding: 0.5em;          /* 内側の余白量 */
+    border-radius: 0.67em;   /* 角丸 */
+    background-color: snow;  /* 背景色 */
+  }
+  
+  #gacha-button{
+    margin-bottom: 3rem;
+  }
+  
+  .btn-square-so-pop {
+    position: relative;
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #fd9535;/*色*/
+    border-radius: 4px;/*角の丸み*/
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+    font-weight: bold;
+    border: solid 2px #d27d00;/*線色*/
+  }
+  
+  .btn-square-so-pop:active {
+    /*押したとき*/
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+  }
+
+  @media (max-width:767px) {
+      .row{
+          flex-direction: column;
+      }
+  }
+  
+  @media (max-width:767px) {
+      .row, .inquiry {
+        flex-direction: column;
+      }
+      h3{
+        padding: 0 auto;
+        font-size: 18px;
+        text-wrap: nowrap;
+      }
+      #ather1{display: none !important;}
+      #ather2{display: block !important;}
+    }
+  
+@media only screen and (max-width:767px){
+  #ather1{display: none !important;}
+  #ather2{display: block !important;}
+}
+
+#ather1{display: block !important;}
+#ather2{display: block !important;}
+
+/*tabの形状*/
+.tab{
+  display: flex;
+  flex-wrap: nowrap;
+}
+.tab li a{
+  display: block;
+  background:#ddd;
+  padding:10px 10px;
+}
+/*liにactiveクラスがついた時の形状*/
+.tab li.active a{
+  background:#fff;
+}
+
+
+/*エリアの表示非表示と形状*/
+.area {
+  display: none;/*はじめは非表示*/
+  opacity: 0;/*透過0*/
+  background: #fff;
+  padding:30px 20px;
+}
+
+/*areaにis-activeというクラスがついた時の形状*/
+.area.is-active {
+    display: block;/*表示*/
+    animation-name: displayAnime;/*ふわっと表示させるためのアニメーション*/
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes displayAnime{
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#park{
+  background: pink;
+  color: black;
+  margin: 0 20px 20px 20px;
+}
+
+#art{
+  background: orange;
+  color: black;
+  margin: 0 20px 20px 20px;
+}
+
+#cofee{
+  background-color: bisque;
+  color: black;
+  width: 260px;
+  height: 40px;
+  margin: 0 20px 0 20px;
+}
+
+#gaiya{
+  background-color: #acd879;
+  color: black;
+  width: 260px;
+  height: 40px;
+  margin: 0 20px 20px 20px;
+}
+
+#active{
+  background-color: darkgrey;
+  color: black;
+  width: 300px;
+  text-wrap: nowrap;
+  margin: 0 20px 20px 20px;
+}
+
+#mine{
+  background: burlywood;
+  color: black;
+  width: 260px;
+  height: 40px;
+}
+
+#ather1{
+  background-color: white;
+  box-shadow: none;
+  color: black;
+  width: 300px;
+  border: white;
+}
+
+#ather2{
+  background-color: white;
+  box-shadow: none;
+  color: black;
+  border: white;
+}
+
+#additional{
+  background-color: white;
+  box-shadow: none;
+  color: black;
+  border: white;
+  width: 250px;
+  margin-right: 10rem;
+  margin-bottom: 2rem;
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+body{
+  background:#eee;
+}
+
+ul{
+  list-style:none;
+}
+
+a{
+  color:#333;
+  text-decoration: none;
+}
+
+.wrapper{
+  width:100%;
+  max-width: 960px;
+  margin:30px auto;
+  background:#fefefe;
+}
+
+.area h2{
+  font-size:1.3rem;
+  margin:0 0 20px 10px;
+}
+
+.area li{
+  padding: 10px; 
+  border-bottom: 1px solid #ddd;
+}
+
+/*========= レイアウトのためのCSS ===============*/
+body {
+  overflow: hidden;
+}
+
+.flex{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.box{
+  width: 220px;
+  padding: 20px;
+  background: yellowgreen;
+  color: black;
+  box-sizing:border-box;
+  list-style: none;
+}
+
+#jump{
+  margin: 0 20px 20px 20px;
+}
+
+/*==================================================
+スタート時は要素自体を透過0にするためのopacity:0;を指定する
+===================================*/
+
+.box{
+  opacity: 0;
+}
+
+/*==================================================
+ふわっ
+===================================*/
+
+.fadeUp {
+animation-name:fadeUpAnime;
+animation-duration:0.5s;
+animation-fill-mode:forwards;
+opacity: 0;
+}
+
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+#slider2 {
+    width: 100%;
+    height: 100vh;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+a{
+  color: #fff;
+}
+
+a:hover,
+a:active{
+  text-decoration: none;
+}
+
+h1{
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size:6vw;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.wrapper2{
+  position: relative;
+  margin-top: 1rem;
+}
+
+.container2{
+  background:#555;
+}
+
+.container2 p{
+  padding: 300px 0; 
+  text-align: center;
+  color: #fff;
+}
