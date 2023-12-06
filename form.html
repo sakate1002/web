@@ -25,24 +25,56 @@
         <img src="hakone/ryuchan.png">
         </div>
         <section>
-        <h3>入力フォーム</h2>
-        <form action="mailto:sakateng2@gmail.com" method="post" enctype="text/plain">
-            名前：<input type="text" name="name" class="textname"><br>
-            性別 :　<input type="radio" name="seibetu" value="woman">女<br>
-            興味のあるサービス :<br> <input type="checkbox" name="service" value="wash">洗い物 <input type="checkbox" name="service" value="cook">料理 <br>
-            内容 : <br><textarea class="textlines" placeholder="Webサイトの感想を書いてくれー！" name="inq"></textarea><br>
+        <h3>入力フォーム</h3>
+        <form name="contact" method="POST" data-netlify="true">
+            <div>
+                <label for="name">お名前 ： </label>
+                <input name="名前" class="textname" type="text" required />
+            </div>
+            <div>
+                <nobr><label for="email">メールアドレス ： </label>
+                <input name="email" class="textname" type="email" required /></nobr>
+            </div>
+            性別 : <input type="radio" name="性別" value="女">女<br>
+            <nobr>興味のあるサービス : <input type="checkbox" name="興味のあるサービス" value="洗い物">洗い物 <input type="checkbox" name="興味のあるサービス" value="料理">料理</nobr> <br>
+            <div>
+            内容 : <br><textarea class="textlines" placeholder="Webサイトの感想を書いてくれー！" name="感想"></textarea><br>
+            </div>
             <input type="submit" class="submit">
-
         </form>
+        <!--
+        <div class="container">
+            <h1>お問い合わせ</h1>
+            <form name="contact" method="POST" data-netlify="true">
+              <div>
+                <label for="name">お名前（必須）</label>
+                <input name="name" type="text" required />
+              </div>
+              <div>
+                <label for="email">メールアドレス（必須）</label>
+                <input name="email" type="email" required />
+              </div>
+              <div>
+                <label for="content">お問い合わせ内容</label>
+                <textarea
+                  name="content"
+                  rows="10"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit">送信する</button>
+            </form>
+          </div>-->
         </section>
         </main>
         <div class="navi">
             <nav>
               <!--スクロールしてふわっ-->
              <ul class="flex delayScroll">
-                 <li class="box"><a href="index.html">ホーム</a></li>
+                 <li class="box"><a href="home.html">ホーム</a></li>
                  <li class="box"><a href="company.html">箱根観光地</a></li>
                  <li class="box"><a href="form.html">感想</a></li>
+                 <li class="box"><a href="index.html">ログアウト</a></li>
              </ul>    
              </nav>
             </div>
@@ -51,7 +83,7 @@
           </footer>
         </div>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script src="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/4-12/js/4-12.js"></script>
+        <script src="huwa.js"></script>
     </body>
 
 </html>

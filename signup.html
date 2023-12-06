@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  </meta>
+  <title>CognitoSignUp</title>
+  <script src="js/aws-cognito-sdk.min.js"></script>
+  <script src="js/amazon-cognito-identity.min.js"></script>
+  <script src="js/main.js"></script>
+  <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+    <form name="login_form">
+        <div class="login_form_top">
+            <h1>サインアップ</h1>
+            <p>登録するメールアドレス、パスワードをご入力の上、<br>「サインアップ」をクリックしてください。</p>
+        </div>
+        <div class="login_form_btm">
+            <span style="display: inline-block; width: 100px;">　</span>
+            <input type="text" id="email" placeholder="メールアドレス">
+            <br />
+            <span style="display: inline-block; width: 100px;">　</span>
+            <input type="password" id="password" placeholder="パスワード">
+            <br /><br />
+            <input type="button" value="サインアップ" onclick="SignUp();">
+        </div>
+    </form>
+</body>
+
+</html>
